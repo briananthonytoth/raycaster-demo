@@ -45,3 +45,6 @@ cl /O2 /DUNICODE /D_UNICODE raycaster.cpp /link gdi32.lib user32.lib /subsystem:
 The world is a 2D grid of cells that are either empty (traversable) or solid (walls). For each vertical column of the screen, a ray is cast from the player's position into the world. That ray is advanced cell-by-cell until it hits a wall. The distance computed between the player and that wall is used to determine the proportional height of the wall on that column. Closer walls produce taller slices and vice versa.
 
 The player's view is defined by a direction vector. A camera plane vector, perpendicular to the direction vector, controls perpendicular distance correction during rendering and the current field of view. When perpendicular distance correction is enabled, rays are cast between points on the camera plane and corresponding screen columns. The ray length for that column is the sum of the player's direction vector and the corresponding offset on the camera plane. This produces an undistorted view.
+
+Brian Toth
+briananthonytoth@gmail.com
