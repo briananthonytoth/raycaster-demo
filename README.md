@@ -1,5 +1,5 @@
 # Raycaster Demo
-A simple Wolfenstein 3D-style raycaster for Windows. Contained in a single C++ file. Intended as an interactive demonstration of the rendering techniques a "simple" rendering approach like this requires, offering toggleable "naive" implementations of various features to show how they distort things.
+A simple Wolfenstein 3D-style raycaster for Windows. Contained in a single C++ file. Intended as a personal learning tool and interactive demonstration of the rendering techniques a "simple" rendering approach like this requires. It offers toggleable "naive" implementations of various renderer features to show how they distort things.
 
 The renderer operates at a native resolution of 320×240 and scales up to fill the window. The window is freely resizable and supports maximizing to fullscreen.
 
@@ -7,7 +7,7 @@ Written with the help of Claude.
 
 ## Building
 
-Just run the .exe included. If you'd like to build it yourself, you'll need MSVC. From a Developer Command Prompt:
+Just run the release executable. If you'd like to build it yourself, you'll need MSVC. From a Developer Command Prompt:
 
 ```
 cl /O2 /DUNICODE /D_UNICODE raycaster.cpp /link gdi32.lib user32.lib /subsystem:windows
