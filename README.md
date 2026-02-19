@@ -42,7 +42,7 @@ cl /O2 /DUNICODE /D_UNICODE raycaster.cpp /link gdi32.lib user32.lib /subsystem:
 | Key | Effect | What it demonstrates |
 |-----|--------|----------------------|
 | C | **Per-frame ("raw") movement**: disable delta-time scaling | Normally movement speed is multiplied by elapsed frame time so it remains consistent at any frame rate. With this off, each frame moves a fixed distance regardless of how long it took. Without lag mode enabled this will probably be extremely fast on your system |
-| J | **Lag mode**: toggle ~12 fps simulation | Adds an 83ms sleep each frame, throttling the program to roughly 12 fps. With naive ray march enabled, this makes the speed difference visible. With it disabled, delta-time scaling keeps movement consistent despite the lowered frame rate. |
+| J | **Lag mode**: toggle ~12 fps simulation | Adds an 83ms sleep each frame, throttling the program to roughly 12 fps. With raw movement enabled, this makes the speed difference visible. With it disabled, delta-time scaling keeps movement consistent despite the lowered frame rate. |
 
 ## How it works
 The world is a 2D grid of cells that are either empty (traversable) or solid (walls). For each vertical column of the screen, a ray is cast from the player's position into the world. That ray is advanced cell-by-cell until it hits a wall. The distance computed between the player and that wall is used to determine the proportional height of the wall on that column. Closer walls produce taller slices and vice versa.
